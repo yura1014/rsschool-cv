@@ -4,7 +4,7 @@
 
 #### Main goals and hobby: personal growth, family, adventures, bicycle and electronics.
 
-#### Programming languages and technologies: C++, Python, Django, Javascript
+#### Programming languages and technologies: C++ vcl framework, Python, Django, Javascript
 
 #### Courses: 2020 Coursera, EDX: Python specialization, SoloLearn: JavaScript+React, Redux, ESL, Lingualand: english ;
 
