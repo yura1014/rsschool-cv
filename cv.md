@@ -8,7 +8,7 @@
 
 #### Courses: 2020 Coursera, EDX: Python specialization, SoloLearn: JavaScript+React, Redux, ESL, Lingualand: english ;
 
-#### Education: engineer-programmer, master degree in the technical sciences;
+#### Education: BSUIR, engineer-programmer, master degree in the technical sciences;
 
 #### Job experience:
 
