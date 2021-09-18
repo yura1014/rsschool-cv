@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
 body {
   padding: 0;
-  margin: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   text-align: left;
+}
+.page-container {
+  margin: 0;
 }
 li {
   padding: 5px 0 5px 0;
@@ -13,14 +18,16 @@ li {
 .fa {
   padding: 20px;
   font-size: 30px;
-  width: 30px;
   text-align: center;
   text-decoration: none;
-  border-radius: 50%;
 }
 .fa-facebook {
   background: #3b5998;
   color: white;
+}
+iframe {
+  width: 60vw;
+  height: 50vh;
 }
 .fa-twitter {
   background: #55acee;
@@ -36,6 +43,7 @@ li {
 header {
   text-align: center;
   padding-top: 50px;
+  padding-bottom: 10px;
 }
 header img {
   width: 190px;
@@ -44,31 +52,66 @@ header img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 30%;
 }
 .flex-container {
   display: flex;
   flex-direction: row;
-  width: 100%;
+
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .div1 {
   display: flex;
   align-items: center;
   justify-content: start;
   flex-direction: column;
-  flex-basis: 35%;
+
+  flex-basis: 40%;
   border: lightblue 5px solid;
   border-radius: 10px;
   padding-left: 1%;
   margin: 5px 5px 5px 5px;
 }
+.video-block {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+
+  overflow: hidden;
+}
+
+.video-block iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 .div2 {
-  flex-basis: 50%;
+  flex-basis: 70%;
   border: rgb(171, 243, 189) 5px solid;
   border-radius: 10px;
+  align-self: center;
 }
 .text-container {
   font-size: 1.5em;
@@ -79,20 +122,30 @@ header img {
 }
 
 section {
-  min-height: 520px;
+  min-height: 480px;
+  min-width: 500px;
   padding-bottom: 20px;
+  flex-grow: 0;
 }
 .div1:hover {
   flex-grow: 1;
   font-weight: 500;
   transition: flex-grow 1s ease;
 }
+.div2:hover {
+  font-weight: 500;
+}
 .my-flex-block {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 800px) {
+  section {
+    min-height: unset;
+    min-width: unset;
+  }
+
   /* разрешаем перенос */
   .flex-container {
     flex-wrap: wrap;
@@ -104,10 +157,16 @@ section {
     flex-basis: 100%;
   }
 }
+@media (max-width: 500px) {
+  .flex-container {
+    display: block;
+  }
+}
 .presentation-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .contact-container li {
@@ -120,11 +179,14 @@ section {
   justify-content: center;
   background: rgb(205, 234, 243);
 }
-header h1,
+header,
+h1,
 h2 {
-  font-size: 2.5em;
+  font-size: 1.5rem;
+  line-height: 3rem;
 }
-h2 {
+h2,
+h3 {
   text-align: center;
 }
 
@@ -161,7 +223,10 @@ footer li a {
   color: black;
 }
 footer img {
-  width: 150px;
+  width: 130px;
+}
+#git {
+  max-width: 50px;
 }
 .header__container {
   position: fixed;
@@ -214,17 +279,19 @@ footer img {
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding: 0 16px;
+  justify-content: center;
+  padding: 0 50px;
   top: 0;
   background-color: lightblue;
   left: 0;
   right: 0;
-  height: 50px;
+  height: 30px;
+
   z-index: 9999999;
 }
 .mobile-menu__btn {
   position: relative;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -263,7 +330,8 @@ footer img {
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 50px;
+  flex-shrink: 1;
+  top: 30px;
   left: 0;
   right: 0;
   z-index: 999;
@@ -277,14 +345,25 @@ footer img {
   transition: 0.5s;
   list-style: none;
   padding-left: 0;
-  margin-top: -50px;
+  padding-right: 0;
+  margin-top: 0px;
 }
 .mobile-menu__item {
   font-size: 26px;
   padding-bottom: 15px;
 }
+.projects {
+  text-align: center;
+}
 .projects div {
   padding: 10px 10px 10px 10px;
+}
+.projects ul {
+  padding: 0;
+  display: inline-block;
+}
+.projects p {
+  text-align: center;
 }
 .mobile-menu__link {
   text-decoration: none;
@@ -297,7 +376,7 @@ footer img {
   opacity: 1;
 }
 .mobile-menu__checkbox:checked ~ .mobile-menu__container {
-  height: 30%;
+  height: 43%;
 }
 .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon {
   background: transparent;
