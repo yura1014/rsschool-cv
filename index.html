@@ -3,98 +3,233 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/shades-of-purple.min.css"
+    />
     <title>My CV</title>
   </head>
 
   <body>
-    <header>
-      <img
-        src="https://partycity6.scene7.com/is/image/PartyCity/_pdp_sq_?$_500x500_$&$product=PartyCity/615535"
-        alt="Hi!"
-      />
-      <h1>My CV</h1>
-      <h2>Name: Alexeev Yuriy</h2>
-    </header>
-
-    <h3>Contacts:</h3>
-    <div class="contact-container">
-      <div class="my-flex-block">
-        <ul>
-          <li>email: georgy1014@gmail.com</li>
-          <li>mobile phone number: 123 234 567</li>
-          <li>landline phone number: 123 234 567</li>
-        </ul>
-      </div>
-
-      <div class="my-flex-block">
-        <ul>
-          <li>Messengers: Viber, Telegram</li>
-          <li>
-            Social: <a href="https://VK.com">VK</a>
-            <a href="https://facebook.com">facebook</a>
+    <nav class="mobile-menu">
+      <input type="checkbox" id="checkbox" class="mobile-menu__checkbox" />
+      <label for="checkbox" class="mobile-menu__btn"
+        ><span class="mobile-menu__icon"></span
+      ></label>
+      <div class="mobile-menu__container">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a href="#video" class="mobile-menu__link">Education</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#details" class="mobile-menu__link">My skills</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#about" class="mobile-menu__link">About me</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#contacts" class="mobile-menu__link">Contacts</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#code" class="mobile-menu__link">Code example</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#video" class="mobile-menu__link">Video presentation</a>
           </li>
         </ul>
       </div>
-    </div>
-    <div class="about-container">
-      <section id="about">
-        <h3>About me:</h3>
+    </nav>
+    <!-- <div class="hamburger-menu" >
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>  <ul class="menu__box" id="box">
+        <li><a class="menu__item "onclick="closeMenu()" href="#Education">Education</a></li>
+        <li><a class="menu__item" href="#details">My skills</a></li>
+        <li><a class="menu__item" href="#about">About me</a></li>
+        <li><a class="menu__item" href="#contacts">Contacts</a></li>
+        <li><a class="menu__item" href="#code">Code example</a></li>
+        <li><a class="menu__item" href="#video">Video presentation</a></li>
+      </ul>
+    </div> -->
+    <header>
+      <h1>My CV</h1>
+      <img src="assets/minion.JPG" alt="Hi!" />
+      <h2>Hi, I am Alexeev Yuriy!</h2>
+    </header>
+    <div class="flex-container">
+      <div class="div1">
+        <section id="Education">
+          <h2>Education:</h2>
+          <div class="text-container">
+            <div>BSUIR 2008-2013 engineer-programmer</div>
+            <div>Master degree in the technical sciences;</div>
+          </div>
+          <h2>Additional education:</h2>
+          <div class="text-container">
+            <div>2021 Rolling-scopes: Frontend course stage 0;</div>
+            <div>2020 Coursera, EDX: Python specialization;</div>
+            <div>SoloLearn: JavaScript+React, Redux,</div>
+            <div>English as a second language: A2 course</div>
+            <div>Lingualand: B1 course;</div>
+          </div>
+        </section>
+      </div>
+      <div class="div1">
+        <section id="details">
+          <h2>My skills:</h2>
+          <div class="text-container">
+            Programming languages and technologies:
+            <p>C++, Python, Django, Javascript</p>
+            <p>English Level: B1</p>
+            <p>Job experience:</p>
+            <details>
+              <summary>Jobs list</summary>
+              <ol>
+                <li>2011, BelItSoft TestEngineer</li>
+                <li>
+                  2014-2015, MG.by System Administrator: <br />
+                  XenServer, Linux, Mikrotic, VPN
+                </li>
+                <li>2015-2016, Learning</li>
+                <li>2016-2021 working aroud IT</li>
+              </ol>
+            </details>
+            <img src="assets/hammer.png" alt="hammer" class="center" />
+          </div>
+        </section>
+      </div>
 
-        <p>
-          goals and hobby:
-          <i> family, adventures, bicycle and electronics.</i>
-        </p>
-        <p>
-          Programming languages and technologies:<i>
-            C++, Python, Django, Javascript</i
-          >
-        </p>
-        <p>
-          Courses:
-          <i
-            >2020 Coursera, EDX: Python specialization, SoloLearn:
-            JavaScript+React, Redux, ESL, Lingualand: english ;</i
-          >
-        </p>
-        <p>
-          Education:
-          <i
-            >BSUIR, engineer-programmer, master degree in the technical
-            sciences;</i
-          >
-        </p>
-        <p>English level: <i>B1;</i></p>
-        <p>Job experience:</p>
-        <details>
-          <summary>Jobs list</summary>
-          <ol>
-            <li>
-              BelItSoft TestEngineer, testing of SP LMS using Jira bug-tracking
-              system;
-            </li>
-            <li>
-              2014-2015, MG.by System Administrator XenServer, Linux, Mikrotic,
-              VPN
-            </li>
-            <li>2015-2016, Learning</li>
-            <li>2016-2021 working aroud IT</li>
-          </ol>
-        </details>
-        <p>Code examples:</p>
-        <pre><code>const func = (num) => {
-            if (num > 0) {
-              return num - 1;
+      <div class="div1">
+        <section id="about">
+          <h2>About me:</h2>
+          <div class="text-container">
+            <div>I love programming, you can make almost everything</div>
+            from nothing!
+            <div>My goals: family, personal growth;</div>
+            <div>I like adventures, riding a bicycle, repair technics</div>
+            <div>or just split it into pieces and buy a new one.</div>
+            <img src="assets/bicycle-1054.png" alt="bicycle" class="center" />
+          </div>
+        </section>
+      </div>
+      <div class="div1">
+        <section id="contacts">
+          <h2>My contacts:</h2>
+          <div class="text-container">
+            <ul>
+              <li>email: georgy1014@gmail.com</li>
+              <li>mobile phone number: 123 234 567</li>
+              <li>landline phone number: 123 234 567</li>
+              <li>Messengers: Viber, Telegram</li>
+              <li>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-skype"></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <div class="div2">
+        <section id="code">
+          <h2>Code example:</h2>
+          <div class="text-container">
+            <pre><code>function isPrime(num) {
+
+          if (num === 2) {
+            return true;
+          } else if (num &gt; 1) {
+            for (var i = 2; i &lt; num; i++) {
+              if (num % i !== 0) {
+                return true;
+              } else if (num === i * i) {
+                return false
+              } else {
+                return false;
+              }
             }
-            return num + 1;
-          };
-        </code></pre>
-      </section>
+          } else {
+            return false;
+          }
+        }
+       </code></pre>
+
+            <h2>My projects:</h2>
+            <div class="projects flex-container">
+              <div>
+                <a href="https://github.com/yura1014/videoplayer" target="blank"
+                  ><img
+                    src="assets/player.JPG"
+                    alt="player"
+                    width="300"
+                    height="170"
+                /></a>
+                <p>Custom VideoPlayer:</p>
+                <ul>
+                  <li>JS+CSS+HTML</li>
+                </ul>
+              </div>
+              <div>
+                <a
+                  href="https://github.com/yura1014/vertical-slider"
+                  target="blank"
+                  ><img
+                    src="assets/slider.JPG"
+                    alt="slider"
+                    width="300"
+                    height="170"
+                /></a>
+                <p>VerticalSlider:</p>
+                <ul>
+                  <li>JS+CSS+HTML</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
+    <section id="video">
+      <h2>Presentation</h2>
+      <div class="presentation-container">
+        <div class="my-flex-block">
+          <iframe
+            width="1280"
+            height="831"
+            src="https://www.youtube.com/embed/_a-veu33xs4"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <div>
+            <a
+              href="https://docs.google.com/document/d/18bTBSBQt95Crmu8e6zM3aVSn5Fhpa0Nbr_kfrwXwQ60/edit?usp=sharing"
+              >Transscription</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <div class="container2">
         <ul>
-          <li><a href="https://github.com/yura1014">My Github</a></li>
+          <li>
+            <a href="https://github.com/yura1014"
+              ><img
+                src="assets/github.png"
+                title="my github"
+                alt="github logo by Dave Gandy"
+            /></a>
+          </li>
           <li>
             <a href="https://rs.school/">
               <img
@@ -106,5 +241,10 @@
         <p>&copy; 2021 All right reserved</p>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+      hljs.highlightAll();
+    </script>
   </body>
 </html>
