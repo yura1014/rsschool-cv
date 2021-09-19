@@ -376,7 +376,7 @@ footer img {
   opacity: 1;
 }
 .mobile-menu__checkbox:checked ~ .mobile-menu__container {
-  height: 43%;
+  height: 45%;
 }
 .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon {
   background: transparent;
