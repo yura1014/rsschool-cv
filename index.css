@@ -163,6 +163,9 @@ section {
   .flex-container {
     display: block;
   }
+   .projects img {
+    max-width: 100%;
+  }
 }
 .presentation-container {
   display: flex;
